@@ -5,8 +5,12 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="description" content="learn nodejs">
         <title>{{ title }}</title>
-        <link rel="stylesheet" href="/static/css/bootstrap.css">
-        <script src="/static/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- <link rel="stylesheet" href="/static/css/bootstrap.css">
+        
+        <script src="/static/js/bootstrap.js"></script> -->
     </head>
     <body>
         <header class="navbar navbar-default">
@@ -23,5 +27,17 @@
                 </div>    
             </div>
         </header>
+        <div id="important" style="color:#cdbfe3;background-color:#6f5499; padding:30px 0;margin:-20px 0 20px 0">
+            <div class="container">
+                <h1 style="color:#fff; font-size:60px">Getting started</h1>
+                <p style=" font-size:24px; line-height:48px">Learn JavaScript, Node.js, npm, koa2, nunjucks, babel, etc. at liaoxuefeng.com.</p>
+            </div>
+        </div>
+        {% block main %}{% endblock %}
+        <footer style="background-color:#ddd;padding: 20px 0">
+            <div class="container">
+                <p>This is created by <a taget="_blank" href="https://github.com/kingmore96">王赓</a></p>
+            </div>
+        </footer>
     </body>
 </html>
