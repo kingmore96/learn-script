@@ -1,3 +1,6 @@
+/**
+ * 读取controller文件夹下的middleware，并注册到router中
+ */
 const router = require('koa-router')();
 
 const fs = require('fs');
@@ -33,7 +36,5 @@ function addController(){
     return router.routes();
 }
 
-var routes = addController();
-
-module.exports = routes;
+module.exports = addController;
 

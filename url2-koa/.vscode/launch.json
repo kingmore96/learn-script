@@ -9,7 +9,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/nunjucks.js"
+            "program": "${workspaceFolder}/app.js"
         }
     ]
 }

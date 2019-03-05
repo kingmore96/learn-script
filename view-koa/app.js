@@ -1,10 +1,12 @@
 const Koa = require('koa');
-
 const bodyParser = require('koa-bodyparser');
-
-const routes = require('./controller');
-
+const addController = require('./controller');
 const app = new Koa();
+const templating = require('./templating');
+
+templating('views',{
+    noCache:true
+},app);
 
 app.use(async(ctx,next) =>{
     console.log(`Process ${ctx.request.method},${ctx.request.url}......`);
@@ -13,7 +15,7 @@ app.use(async(ctx,next) =>{
 
 app.use(bodyParser());
 
-app.use(routes);
+app.use(addController());
 
 app.listen(3000);
 

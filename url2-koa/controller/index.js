@@ -1,4 +1,5 @@
 var fn_index = async (ctx, next) => {
+    console.log(`start fn_index! ${ctx.request.url}`)
     ctx.response.body = `<h1>Index</h1>
         <form action="/signin" method="post">
             <p>Name: <input name="name"></p>
@@ -8,6 +9,7 @@ var fn_index = async (ctx, next) => {
 };
 
 var fn_signin =async(ctx,next) =>{
+    console.log(`start fn_signin! ${ctx.request.url}`)
     var name = ctx.request.body.name;
     var password = ctx.request.body.password;
 
